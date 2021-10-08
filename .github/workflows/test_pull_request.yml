@@ -1,0 +1,22 @@
+name: Test at pull request
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+env:
+  LANG: C.UTF-8
+
+jobs:
+  check_todo_and_fixme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - run: echo ${{github.base_ref}}
+
+      - run: cat $GITHUB_REF
+
+      - uses: ./.github/actions/check_todo_and_fixme
