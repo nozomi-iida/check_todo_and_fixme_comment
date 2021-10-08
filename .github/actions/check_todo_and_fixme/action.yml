@@ -1,12 +1,5 @@
-# TOOD!とFIXME!がある場合マージできないようにするgithub actionを作成する
-# git diffの中にTODO!orFIXME!があるかどうかを確認する https://tech.griphone.co.jp/2020/05/28/github-actions-to-slack/
-# TODO!orFIXME!があればマージできないようにする← ::error::メッセージを標準出力する https://qiita.com/nogic1008/items/35ca50f98edafa13835e or https://docs.github.com/ja/actions/creating-actions/setting-exit-codes-for-actions
-# https://github.com/nickssmith/TODO_and_CommentedCode_Check参考になりそう
-
-
 name: 'Check TODO! and FIXME! comment'
-description: 'TODO! または　FIXME!コメントがあった場合にマージできないようにする'
+description: 'TODO! または,FIXME!コメントがあった場合にマージできないようにする'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-

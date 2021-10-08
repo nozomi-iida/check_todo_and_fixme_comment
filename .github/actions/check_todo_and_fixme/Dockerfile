@@ -2,8 +2,8 @@
 FROM ubuntu
 
 RUN apt-get update
-RUN apt -y install jq
 RUN apt-get -y install git
+RUN apt -y install perl
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
